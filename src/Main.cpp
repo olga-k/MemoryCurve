@@ -31,6 +31,10 @@ int main(void)
 	memoryLogCurveOfLength10(&eventTimeLine, &eventMemoryCurve);
 	PrintTimeSeries(&eventMemoryCurve);
 
+	time_series->clear();
+	vector<double>().swap(*time_series);
+	delete time_series;
+
 	return 0;
 }
 
